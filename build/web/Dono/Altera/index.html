@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Controle de Donos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #FFF5E9; /* bege suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container principal */
+.container {
+    background: #ffffff;
+    padding: 25px 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 400px;
+    text-align: center;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.logo img {
+    width: 110px;
+    border-radius: 10px;
+}
+
+/* Título */
+h2 {
+    color: #6B3F2A; /* marrom */
+    margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    color: #6B3F2A;
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/* Inputs */
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #d8c1aa;
+    border-radius: 6px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #F2A344; /* laranja */
+    box-shadow: 0 0 6px rgba(242, 163, 68, 0.5);
+}
+
+/* Botões */
+input[type="submit"],
+input[type="reset"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Botão submit */
+input[type="submit"] {
+    background: #F2A344;
+    color: #fff;
+}
+
+input[type="submit"]:hover {
+    background: #d9872e;
+}
+
+/* Botão reset */
+input[type="reset"] {
+    background: #6B3F2A;
+    color: #fff;
+}
+
+input[type="reset"]:hover {
+    background: #4f2d1e;
+}
+    </style>
+    </head>
+    <body>
+        <div class="container">
+        
+        <div class="logo">
+            <img src="../imagens/site.jpg" alt="Logo">
+        </div>
+
+        <h2>Donos - Consulta por ID</h2>
+
+        <form method="post" action="dono_cons_id.jsp">
+            <label>Identificador:</label>
+            <input type="number" name="id" required>
+
+            <input type="submit" value="Pesquisar para Alterar">
+            <input type="reset" value="Limpar">
+        </form>
+
+    </div>
+
+    </body>
+</html>

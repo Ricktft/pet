@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Alterar Medicamento</title>
+        <style>
+    body {
+        background-color: #FFF5E9;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #6B3F2A;
+    }
+
+    .container {
+        background: #fff;
+        padding: 30px;
+        width: 420px;
+        border: 2px solid #6B3F2A;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 0 12px rgba(0,0,0,0.15);
+    }
+
+    .logo img {
+        width: 110px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+    }
+
+    h2 {
+        margin-bottom: 15px;
+        color: #6B3F2A;
+    }
+
+    label {
+        display: block;
+        text-align: left;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #6B3F2A;
+    }
+
+    input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 12px;
+        border-radius: 6px;
+        border: 1px solid #6B3F2A;
+        background: white;
+        color: #6B3F2A;
+        font-size: 15px;
+    }
+
+    input[type="submit"], input[type="reset"] {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        cursor: pointer;
+        border-radius: 6px;
+        font-size: 16px;
+        margin-top: 8px;
+        background-color: #F2A344;
+        color: white;
+        font-weight: bold;
+    }
+
+    input[type="submit"]:hover, input[type="reset"]:hover {
+        background-color: #d8872f;
+    }
+</style>
+    </head>
+   <body>
+    <div class="container">
+        
+        <div class="logo">
+            <img src="../imagens/site.jpg" alt="Logo">
+        </div>
+
+        <h2>Medicamento - Consulta ID - Alterar</h2>
+
+        <form method="get" action="medicamento_altera.jsp">
+            <label>ID do Medicamento:</label>
+            <input type="number" name="id" required>
+
+            <input type="submit" value="Pesquisar para Alterar">
+            <input type="reset" value="Limpar">
+        </form>
+
+    </div>
+</body>
+</html>
+

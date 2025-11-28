@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Usuário</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #FFF5E9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .cadastro-container {
+            background: white;
+            width: 360px;
+            padding: 35px;
+            border-radius: 12px;
+            border: 2px solid #A96E3B;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #6B3F2A;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #6B3F2A;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #A96E3B;
+            border-radius: 6px;
+            font-size: 15px;
+            background: #FFF8EE;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #F2A344;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #D88327;
+        }
+
+        .voltar {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .voltar a {
+            color: #F2A344;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .voltar a:hover {
+            text-decoration: underline;
+            color: #6B3F2A;
+        }
+         .logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .logo img {
+            width: 110px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cadastro-container">
+        <div class="logo">
+            <img src="../imagens/site.jpg" alt="Logo">
+        </div>
+        <h2>CADASTRO</h2>
+
+        <form action="cadastro.jsp" method="post">
+            
+            <label>Nome:</label>
+            <input type="text" name="nome" required>
+            
+            <label>Crie sua Senha:</label>
+            <input type="password" name="senha" required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <div class="voltar">
+            <a href="../index.html">Voltar</a>
+        </div>
+    </div>
+
+</body>
+</html>

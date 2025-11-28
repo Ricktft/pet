@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Alterar Hospedagem - Consultar ID</title>
+  <style>
+    body {
+      background-color: #FFF5E9;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: #6B3F2A;
+    }
+
+    h2 {
+      text-align: center;
+      color: #6B3F2A;
+      margin-bottom: 20px;
+    }
+
+    form {
+      background: #fff;
+      border: 2px solid #6B3F2A;
+      border-radius: 10px;
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 25px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="number"] {
+      width: 90%;
+      padding: 10px;
+      border: 1px solid #6B3F2A;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      background-color: #F2A344;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: #d8872f;
+    }
+  </style>
+</head>
+<body>
+  <h2>Alterar Hospedagem</h2>
+  <form method="get" action="hospedagem_altera.jsp">
+    <label>ID do Dono:</label>
+    <input type="number" name="id" required>
+    <input type="submit" value="Alterar">
+    <input type="reset" value="Limpar">
+  </form>
+</body>
+</html>
+

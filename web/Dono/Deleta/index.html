@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Excluir Dono - Consultar ID</title>
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #F7F2EB;
+    color: #4A4A4A;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .titulo-pagina {
+    color: #6B4F4F;
+    margin-bottom: 20px;
+  }
+
+  .form-container {
+    background-color: #F5E6D3;
+    padding: 20px;
+    border-left: 5px solid #C9A66B;
+    border-radius: 10px;
+    max-width: 400px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #C9A66B;
+    border-radius: 6px;
+    background-color: #FFFDF8;
+  }
+
+  .botoes {
+    display: flex;
+    gap: 10px;
+  }
+
+  .btn {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .btn-excluir {
+    background-color: #C96B6B;
+    color: white;
+  }
+
+  .btn-excluir:hover {
+    background-color: #A44F4F;
+  }
+
+  .btn-limpar {
+    background-color: #C9A66B;
+    color: white;
+  }
+
+  .btn-limpar:hover {
+    background-color: #A37E4B;
+  }
+</style>
+</head>
+<body>
+  <h2 class="titulo-pagina">Excluir Dono</h2>
+
+  <form class="form-container" method="get" action="dono_excluir.jsp">
+    <label>ID do Dono:</label>
+    <input type="number" name="id" required>
+
+    <div class="botoes">
+      <input type="submit" value="Excluir" class="btn btn-excluir">
+      <input type="reset" value="Limpar" class="btn btn-limpar">
+    </div>
+  </form>
+</body>
+</html>
+

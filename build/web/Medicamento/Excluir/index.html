@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Excluir Medicamento</title>
+        <style>
+        body {
+            background-color: #FFF5E9;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #6B3F2A;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            border: 2px solid #6B3F2A;
+            border-radius: 10px;
+            padding: 25px;
+            width: 420px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #6B3F2A;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #6B3F2A;
+            background: #FFF5E9;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 100%;
+            padding: 12px;
+            color: #fff;
+            background-color: #F2A344;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            margin-top: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #d8872f;
+        }
+    </style>
+    </head>
+    
+<body>
+
+    <div class="container">
+        <h2>Medicamento - Excluir por ID</h2>
+
+        <form method="get" action="medicamento_excluir.jsp">
+            <label>ID do Medicamento:</label>
+            <input type="number" name="id" required>
+
+            <input type="submit" value="Excluir">
+            <input type="reset" value="Limpar">
+        </form>
+    </div>
+
+</body>
+</html>
+
