@@ -1,0 +1,79 @@
+-- Cria o BD
+CREATE DATABASE IF NOT EXISTS pet;
+USE pet;
+
+-- Tabela Dono
+CREATE TABLE IF NOT EXISTS Dono (
+  idDono INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(120) NOT NULL,
+  cpf  VARCHAR(14)  NOT NULL,
+  telefone VARCHAR(20),
+  email VARCHAR(160) NOT NULL UNIQUE
+) ENGINE=InnoDB;
+
+-- Tabela Animal
+CREATE TABLE IF NOT EXISTS Animal (
+  idAnimal INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100) NOT NULL,
+  especie VARCHAR(60) NOT NULL,
+  raca VARCHAR(80),
+  idade INT,
+  peso DECIMAL(6,2),
+  observacoes TEXT,
+  idDono INT NOT NULL,
+  CONSTRAINT fk_animal_dono
+    FOREIGN KEY (idDono) REFERENCES Dono(idDono)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+) ENGINE=InnoDB;
+
+-- Tabela Medicamento
+CREATE TABLE IF NOT EXISTS Medicamento (
+  id_remedio INT AUTO_INCREMENT PRIMARY KEY,
+  nome_remedio VARCHAR(120) NOT NULL,
+  intervalo_tempo INT NOT NULL, -- em horas, por ex.
+  fk_id_animal INT NOT NULL,
+  CONSTRAINT fk_med_animal
+    FOREIGN KEY (fk_id_animal) REFERENCES Animal(idAnimal)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+) ENGINE=InnoDB;
+
+-- Alterações em Medicamento
+ALTER TABLE Medicamento
+  ADD COLUMN dose INT AFTER intervalo_tempo,
+  ADD COLUMN unidade VARCHAR(10) AFTER dose;
+
+-- Alterações em Animal
+ALTER TABLE Animal
+  ADD COLUMN data_chegada DATE AFTER peso,
+  ADD COLUMN data_saida DATE AFTER data_chegada;
+
+--ADICIONA IMAGEM NO ANIMAL (ESse era o problema)
+ALTER TABLE Animal
+  ADD COLUMN imagem_pet MEDIUMBLOB NULL;
+
+-- Tabela Hospedagem
+CREATE TABLE IF NOT EXISTS Hospedagem (
+    idHospedagem INT AUTO_INCREMENT PRIMARY KEY,
+    idDono INT NOT NULL,
+    idAnimal INT NOT NULL,
+    dataEntrada DATE NOT NULL,
+    dataSaida DATE,
+    observacoes TEXT,
+    valorDiaria DECIMAL(10,2),
+    valorTotal DECIMAL(10,2),
+    FOREIGN KEY (idDono) REFERENCES Dono(idDono) ON DELETE CASCADE,
+    FOREIGN KEY (idAnimal) REFERENCES Animal(idAnimal) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+-- Adiciona imagem em Dono
+ALTER TABLE Dono
+  ADD COLUMN imagem_dono MEDIUMBLOB NULL;
+
+-- Tabela de Cadastro/Login
+CREATE TABLE IF NOT EXISTS cadastro (
+    idCad INT AUTO_INCREMENT PRIMARY KEY,
+    nomeCad VARCHAR(100) NOT NULL,
+    senhaCad CHAR(32) NOT NULL
+) ENGINE=InnoDB;
